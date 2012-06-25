@@ -1,0 +1,34 @@
+#######################################
+# Syntax Coloring Map For Ultrasound
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+FB27984	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+reset KEYWORD2
+tune_enable KEYWORD2
+tune_disable KEYWORD2
+tune_done KEYWORD2
+seek_off KEYWORD2
+seek_up KEYWORD2
+seek_down KEYWORD2
+vol_update KEYWORD2
+chan_update KEYWORD2
+chan_set KEYWORD2
+chan_get KEYWORD2
+sst_update KEYWORD2
+setConfig KEYWORD2
+getStatus KEYWORD2
+printConfig KEYWORD2
+printStatus KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+
