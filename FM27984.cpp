@@ -120,8 +120,8 @@ void FM27984::setConfig()
 
  Wire.beginTransmission(SLAVE_ID);
  for(i=0; i< CONFIG_WORDS;i++) {
- 	Wire.send((int)Config[i]>>8);
- 	Wire.send((int)Config[i]);
+ 	Wire.write((int)Config[i]>>8);
+ 	Wire.write((int)Config[i]);
  }
  Wire.endTransmission();
 }
@@ -133,8 +133,8 @@ void FM27984::getStatus()
  int i;
  Wire.requestFrom(SLAVE_ID, STATUS_WORDS*2);
  for(i=0; i< STATUS_WORDS;i++) {
- 	Status[i] = Wire.receive();
- 	Status[i] = Status[i]<<8 | Wire.receive();
+ 	Status[i] = Wire.read();
+ 	Status[i] = Status[i]<<8 | Wire.read();
  }
     seekchan = Status[0] & READCHAN_MASK;
     stc =  Status[0] >> STC  & 1;

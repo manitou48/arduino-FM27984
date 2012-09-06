@@ -154,12 +154,12 @@ void i2cdump(uint8_t addr, int n)
 
  Serial.print(addr,HEX); Serial.println(" dump");
  Wire.beginTransmission(SID);
- Wire.send(addr);  // start addr
+ Wire.write(addr);  // start addr
  Wire.endTransmission();
  Wire.requestFrom(SID, n*2);
  for(i=0; i< n;i++) {
-    buff[i] = Wire.receive();
-    buff[i] = buff[i]<<8 | Wire.receive();
+    buff[i] = Wire.read();
+    buff[i] = buff[i]<<8 | Wire.read();
     sprintf(str,"%04x ",buff[i]);
     Serial.print(str);
  }

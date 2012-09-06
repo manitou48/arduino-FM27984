@@ -1,8 +1,13 @@
 #ifndef FM27984_h
 #define FM27984_h
 
-#include <WProgram.h>
-#include <inttypes.h>
+#if ARDUINO >= 100
+#include "Arduino.h"       // for delayMicroseconds, digitalPinToBitMask, etc
+#else
+#include "WProgram.h"      // for delayMicroseconds
+#include "pins_arduino.h"  // for digitalPinToBitMask, etc
+#endif
+
 
 
 // device ID 
